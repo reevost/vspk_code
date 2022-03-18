@@ -10,17 +10,19 @@ Keywords: kernel-based learning; variably scaled persistence kernel; persistence
 #### Setup and Requirements
 
 First move in the directory where you have all the files of this directory, then unzip the diagrams.zip file, which contains all the persistence digrams built for the application of VSPK in the Alzheimer's disease diagnosis from the Oasis3 dataset [^5].
-All the diagrams here are built with Ripser [^4]. Then if you want you can find all the persistence diagrams for the orbit detection and the shape segmentation experiments in the following dropbox folder: https://www.dropbox.com/sh/2yh1e66fikp79a8/AAABhjEIYJde5g8Ga8cLmFPna?dl=0. If the zip are taken from there, exctract the zip files in the same directory where there are all the others.
+All the diagrams here are built with Ripser [^4]. Then if you want you can find all the persistence diagrams for the orbit detection and the shape segmentation experiments in the following dropbox folder: https://www.dropbox.com/sh/2yh1e66fikp79a8/AAABhjEIYJde5g8Ga8cLmFPna?dl=0. If the zip are taken from there, exctract the zip file in the same directory as the others.
 
 Code runs with python 3.8.x. The libraries needed are:
 
-- numpy 1.21.4
+- numpy 1.22.3
 - gudhi 3.5
-- pandas 1.3.4
-- scipy 1.7.2
-- scikit-learn 1.0.1 
-- potpourri3d 0.0.6
-- matplotlib 3.5.0
+- pandas 1.4.1
+- scipy 1.8.0
+- scikit-learn 1.0.2 
+- potpourri3d 0.0.7
+- matplotlib 3.5.1
+
+More details are in the requirements.txt file.
 
 #### Launch
 
