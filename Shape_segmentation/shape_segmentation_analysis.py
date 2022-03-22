@@ -34,7 +34,7 @@ tic = time.perf_counter()
 # Upload the data
 subjects_dict = {"Human": [1, 30308], "Airplane": [61, 12892], "Ant": [81, 16772], "Bird": [241, 12946],
                  "FourLeg": [381, 20868], "Octopus": [121, 2682], "Fish": [221, 12148]}
-category = "Octopus"
+category = "Airplane"
 
 df_category = pd.DataFrame(columns=["centroid", "persistence diagrams", "label"])
 # SHOW IMAGE
@@ -183,7 +183,7 @@ print("points in main:", len(main))
 
 report = {'t_train': [], 't_val': [], 'f1_score': [], 'accuracy': []}
 for rand_state in program:
-    persistence_kernel = 'PSWK'  # chosen kernel  PSWK - PWGK - PSSK
+    persistence_kernel = 'PWGK'  # chosen kernel  PSWK - PWGK - PSSK
 
     balanced_train_index, balanced_test_index = train_test_split(y.index, test_size=0.3, random_state=rand_state,
                                                                  stratify=y)
