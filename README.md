@@ -3,14 +3,14 @@
 
 #### Abstract
 
-In recent years, various kernels have been proposed in the context of per- sistent homology to deal with persistence diagrams in supervised learning ap- proaches. In this paper, we consider the idea of variably scaled kernels, for ap- proximating functions and data, and we interpret them in the framework of per- sistent homology. We call them Variably Scaled Persistence Kernels (VSPKs). These new kernels are then tested in different classification experiments. The obtained results show that they can improve the performance and the efficiency of existing standard kernels.
+In recent years, various kernels have been proposed in the context of per- sistent homology to deal with persistence diagrams in supervised learning approaches. In this paper, we consider the idea of variably scaled kernels, for approximating functions and data, and we interpret them in the framework of persistent homology. We call them Variably Scaled Persistence Kernels (VSPKs). These new kernels are then tested in different classification experiments. The obtained results show that they can improve the performance and the efficiency of existing standard kernels.
 Keywords: kernel-based learning; variably scaled persistence kernel; persistence diagrams; persistent homology
 
 
 #### Setup and Requirements
 
 First move in the directory where you have all the files of this directory, then unzip the diagrams.zip file, which contains all the persistence digrams built for the application of VSPK in the Alzheimer's disease diagnosis from the Oasis3 dataset [^5].
-All the diagrams here are built with Ripser [^4]. Then if you want you can find all the persistence diagrams for the orbit detection and the shape segmentation experiments in the following dropbox folder: https://www.dropbox.com/sh/2yh1e66fikp79a8/AAABhjEIYJde5g8Ga8cLmFPna?dl=0. If the zip are taken from there, exctract the zip file in the same directory as the others.
+All the diagrams here are built with Ripser [^4]. Then, if you want, you can find all the persistence diagrams for the orbit detection and the shape segmentation experiments in the following dropbox folder: https://www.dropbox.com/sh/2yh1e66fikp79a8/AAABhjEIYJde5g8Ga8cLmFPna?dl=0, otherwise there is a section in the code to generate them (it may take some time). If the zip are taken from Dropbox, exctract the zip file in the directory associated with the same experiment.
 
 Code runs with python 3.8.x. The libraries needed are:
 
@@ -26,7 +26,8 @@ More details are in the requirements.txt file.
 
 #### Launch
 
-To run the code enter the following command
+To run the code, go to the directory of the experiment you want to execute, then enter the following command
+
 ```
 $ python filename.py
 ```
