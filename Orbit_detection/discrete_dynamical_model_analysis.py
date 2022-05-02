@@ -72,7 +72,7 @@ coefficient_r_list = [2.5, 3.5, 4.0, 4.1, 4.3]
 #     persistence_diagrams_savable = []
 #     for dp in persistence_diagrams:
 #         persistence_diagrams_savable += [[dp[0], dp[1][0], dp[1][1]]]
-#     np.save(r'%s/Orbit_detection/dynamic_diagrams/%s_d%s.npy' % (cwd, r_ind, i), np.array(persistence_diagrams_savable))
+#     np.save(r'%s/dynamic_diagrams/%s_d%s.npy' % (cwd, r_ind, i), np.array(persistence_diagrams_savable))
 
 # LOAD OF PERSISTENCE DIAGRAMS
 main = pd.DataFrame(columns=['persistence diagram points', 'y'])
@@ -81,7 +81,7 @@ new_column_pd = []
 new_column_y = []
 for jnd in np.arange(len(coefficient_r_list)):
     for i in np.arange(50):
-        p_d = np.load(r'%s/Orbit_detection/dynamic_diagrams/%s_d%s.npy' % (cwd, jnd, i))  # imported the full pd
+        p_d = np.load(r'%s/dynamic_diagrams/%s_d%s.npy' % (cwd, jnd, i))  # imported the full pd
         p_d_1 = p_d[np.nonzero(p_d[:, 0])][:, 1:]  # selecting only the 1-dim features
         p_d_10 = p_d_1[:10, :]  # take only the 10 feature with higher persistent
 

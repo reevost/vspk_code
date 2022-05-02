@@ -3,6 +3,7 @@ import gudhi as gh
 import pandas as pd
 import time
 import os
+# import matplotlib
 # import matplotlib.pyplot as plt
 
 from scipy.stats import multivariate_normal
@@ -40,7 +41,6 @@ df_category = pd.DataFrame(columns=["centroid", "persistence diagrams", "label"]
 # SHOW IMAGE
 # for i in np.arange(5):  # we take the first 5 elements for every kind of category
 #     j = i + subjects_dict[category][0]
-#     j = 241
 #     f_off = open(fr'{cwd}/MeshsegBenchmark/data/off/{j}.off')
 #     list_off = f_off.readlines()
 #     f_off.close()
@@ -50,6 +50,7 @@ df_category = pd.DataFrame(columns=["centroid", "persistence diagrams", "label"]
 #     list_number_seg = [int(a[:-1]) for a in list_seg]
 #     l_index = 0
 #     print("number of labels:", len(set(list_number_seg)))
+#     print("number of points:", len(list_number_seg))
 #     centroids_dict = {0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [], 11: []}
 #     for element_ind in np.arange(1, len(list_off)):
 #         temp_number_list = np.array([float(e) for e in list_off[element_ind][:-1].split(" ")])
@@ -60,18 +61,19 @@ df_category = pd.DataFrame(columns=["centroid", "persistence diagrams", "label"]
 #                     centroids_dict[c_ind] += [(list_off[2 + int(temp_number_list[1])] + list_off[2 + int(temp_number_list[2])] + list_off[2 + int(temp_number_list[3])]) / 3]
 #             l_index += 1
 #
-# fig = plt.figure()
-# ax = fig.add_subplot(1, 2, 1, projection='3d')
-# for p_ind in np.arange(len(set(list_number_seg))):
-#     m = "o"
-#     colors = list(matplotlib.colors.TABLEAU_COLORS.keys()) + ["lime", "pink"]
-#     ax.scatter(np.array(centroids_dict[p_ind])[:, 0], np.array(centroids_dict[p_ind])[:, 1], np.array(centroids_dict[p_ind])[:, 2], marker=m, c=colors[p_ind])
-# ax.set_xlim(-1, 1)
-# ax.set_ylim(-1, 1)
-# ax.set_zlim(-1, 1)
-# ax.grid(False)
-# ax.set_axis_off()
-# plt.show()
+#     fig = plt.figure()
+#     ax = fig.add_subplot(1, 2, 1, projection='3d')
+#     for p_ind in np.arange(len(set(list_number_seg))):
+#         m = "o"
+#         colors = list(matplotlib.colors.TABLEAU_COLORS.keys()) + ["lime", "pink"]
+#         print(colors)
+#         ax.scatter(np.array(centroids_dict[p_ind])[:, 0], np.array(centroids_dict[p_ind])[:, 1], np.array(centroids_dict[p_ind])[:, 2], marker=m, c=colors[p_ind])
+#     ax.set_xlim(-1, 1)
+#     ax.set_ylim(-1, 1)
+#     ax.set_zlim(-1, 1)
+#     ax.grid(False)
+#     ax.set_axis_off()
+#     plt.show()
 
 # # BUILD PERSISTENCE DIAGRAMS (AND SAVE THEM)
 # for i in np.arange(5):  # we take the first 5 elements for every kind of category
