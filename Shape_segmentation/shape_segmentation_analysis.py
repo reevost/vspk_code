@@ -181,13 +181,13 @@ for label_ in range(label_length):
 
 X = main['persistence diagram points'][label_index]
 y = main['label'][label_index]
-print("points in main:", len(main))
+print("points in main:", len(main), "\npoints used:", len(X))
 
 report = {'t_train': [], 't_val': [], 'f1_score': [], 'accuracy': []}
 for rand_state in program:
-    persistence_kernel = 'PWGK'  # chosen kernel  PSWK - PWGK - PSSK
+    persistence_kernel = 'PSWK'  # chosen kernel  PSWK - PWGK - PSSK
 
-    balanced_train_index, balanced_test_index = train_test_split(y.index, test_size=0.3, random_state=rand_state,
+    balanced_train_index, balanced_test_index = train_test_split(y.index, test_size=0.8, random_state=rand_state,
                                                                  stratify=y)
 
     X_balanced_train = X.loc[balanced_train_index]

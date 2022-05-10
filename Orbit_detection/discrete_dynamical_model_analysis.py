@@ -14,7 +14,7 @@ from sklearn.metrics import confusion_matrix, f1_score, accuracy_score
 from scipy.spatial import distance_matrix
 from sklearn.model_selection import KFold
 
-vsk_flag = True # for Variably Scaled Persistence kernel version
+vsk_flag = False  # for Variably Scaled Persistence kernel version
 # vsk_flag = False # for original kernel version
 np.random.seed(42)
 program = np.arange(10)
@@ -87,9 +87,9 @@ for jnd in np.arange(len(coefficient_r_list)):
 
         if vsk_flag:
             # add center of mass
-            p_d = np.concatenate((p_d_10, [center_of_persistence(p_d_10)]), axis=0)  # Psi_a
-            # p_d = np.concatenate((p_d_10, [center_of_persistence(p_d_1[10:, :])]), axis=0)  # Psi_rho
-        new_column_pd += [p_d]
+            p_d_10 = np.concatenate((p_d_10, [center_of_persistence(p_d_10)]), axis=0)  # Psi_a
+            # p_d_10 = np.concatenate((p_d_10, [center_of_persistence(p_d_1[10:, :])]), axis=0)  # Psi_rho
+        new_column_pd += [p_d_10]
         new_column_y += [jnd]
 
 main['persistence diagram points'] = new_column_pd
